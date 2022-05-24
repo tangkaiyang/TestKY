@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>login</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      body {
+        height: 60vh;
+        background-color: azure;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login-box {
+        padding: 10px;
+        border-radius: 5px;
+        position: relative;
+        height: 200px;
+        width: 350px;
+        background-color: rgb(189, 192, 248);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .welcome {
+        color: rgb(89, 86, 86);
+      }
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+      }
+      .input-box input {
+        width: 250px;
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 5px;
+        text-indent: 15px;
+      }
+      .input-box input:focus {
+        background-color: rgb(174, 245, 226);
+      }
+      button {
+        width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box">
+      <div class="welcome"><h2>Welcome To TestKY</h2></div>
+      <div class="input-box">
+        <input type="text" id="username" placeholder="用户名" />
+        <input type="password" id="password" placeholder="密码" />
+      </div>
+      <div>
+        <button onclick="login()">登录</button>
+      </div>
+    </div>
+    <script>
+      function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        $.get(
+          "/user_login/",
+          {
+            'username': username,
+            'password': password,
+          },
+          function (ret) {}
+        );
+      }
+    </script>
+  </body>
+</html>
