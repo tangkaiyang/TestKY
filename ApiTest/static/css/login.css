@@ -55,9 +55,14 @@ button {
     width: 260px;
     height: 20px;
     border-radius: 5px;
-    border: 0px;
+    border: 0;
     background-color: #afeafa;
     box-shadow: 1px 1px 1px black;
+    // 字符间距
+    letter-spacing: 5px;
+    // 箭头样式
+    cursor: pointer;
+
 }
 
 .notice {
