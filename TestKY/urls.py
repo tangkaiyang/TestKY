@@ -20,6 +20,7 @@ from ApiTest.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/'),
+    path('login/', login),
     path('login_action/', login_action),
+    path('index/', index),
 ]
