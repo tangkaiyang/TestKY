@@ -58,9 +58,9 @@ button {
     border: 0;
     background-color: #afeafa;
     box-shadow: 1px 1px 1px black;
-    // 字符间距
+    /* 字符间距 */
     letter-spacing: 5px;
-    // 箭头样式
+    /* 箭头样式 */
     cursor: pointer;
 
 }
