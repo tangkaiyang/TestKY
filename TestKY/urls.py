@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from ApiTest.views import login
+from ApiTest.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', login),
+    path('login/'),
+    path('login_action/', login_action),
 ]
