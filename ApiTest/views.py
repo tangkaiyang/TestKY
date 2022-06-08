@@ -1,5 +1,5 @@
 from django.contrib import auth
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 
 
@@ -20,7 +20,6 @@ def login_action(request):
     auth.login(request, user)
     request.session["user"] = username
     return HttpResponseRedirect("/index/")
-
 
 def index(request):
     res = dict()
