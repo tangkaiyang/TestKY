@@ -21,7 +21,7 @@ def login_action(request):
     request.session["user"] = username
     return HttpResponseRedirect("/index/")
 
-def index(request):
-    res = dict()
-    res["username"] = request.session["user"]
-    return render(request, "index.html", res)
+# def index(request):
+#     res = dict()
+#     res["username"] = request.session["user"]
+#     return render(request, "index.html", res)

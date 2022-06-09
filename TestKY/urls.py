@@ -18,9 +18,13 @@ from django.urls import path
 
 from ApiTest.views import *
 
+# 引入vue的index
+from django.views.generic import TemplateView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', login),
     path('login_action/', login_action),
-    path('index/', index),
+    # path('index/', index),
+    path('index/', TemplateView.as_view(template_name="index.html"))
 ]
