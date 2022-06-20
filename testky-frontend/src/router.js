@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Welcome from './views/Welcome'
+import Welcome from './views/Welcome.vue'
+import Home from './views/Home'
+import ProjectList from "@/views/ProjectList";
 // 定义vue插件
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
             path: '/welcome',
             name: 'welcome',
             component: Welcome
+        },
+        {
+            path: '/project_list',
+            name: 'project_list',
+            component: ProjectList
         }
     ]
 })

@@ -22,6 +22,10 @@ from ApiTest.views import *
 from django.views.generic import TemplateView
 
 urlpatterns = [
+    # 测试接口
+    path('get/', get),
+    path('post/', post),
+
     path('admin/', admin.site.urls),
     path('login/', login),
     path('login_action/', login_action),

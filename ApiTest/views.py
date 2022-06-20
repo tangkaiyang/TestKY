@@ -1,9 +1,27 @@
 from django.contrib import auth
 from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
+import json
 
 
 # Create your views here.
+
+# 测试接口
+def get(request):
+    response = dict()
+    print(request.GET)
+    for key, value in request.GET.items():
+        response[key] = value
+    return JsonResponse(response)
+
+
+def post(request):
+    response = dict()
+    print(request.body)
+    for key, value in json.loads(request.body).items():
+        response[key] = value
+    return JsonResponse(response)
+
 
 def login(request, message=""):
     res = dict()
