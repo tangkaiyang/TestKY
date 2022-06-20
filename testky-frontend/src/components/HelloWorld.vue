@@ -38,6 +38,7 @@ export default {
 }
 </script>
 
+<!--除此以外均全局有效-->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {

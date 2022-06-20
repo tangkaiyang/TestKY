@@ -10,5 +10,7 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  // createElement
   render: h => h(App)
+  // 挂载id=app的标签
 }).$mount('#app')
